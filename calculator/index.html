@@ -62,9 +62,9 @@
 	-->
 
   <script>
-    function s(event,v) { event.stopPropagation(); document.getElementById('res').value = v }
-    function a(event,v) { event.stopPropagation(); document.getElementById('res').value += v }
-    function e(event) {  event.stopPropagation(); try { s(event,eval(document.getElementById('res').value)) } catch(e) { s('Error') } }
+    function s(event,v) { event.stopPropagation ? event.stopPropagation() : event.cancelBubble = true; document.getElementById('res').value = v }
+    function a(event,v) { event.stopPropagation ? event.stopPropagation() : event.cancelBubble = true; document.getElementById('res').value += v }
+    function e(event) {  event.stopPropagation ? event.stopPropagation() : event.cancelBubble = true; try { s(event,eval(document.getElementById('res').value)) } catch(e) { s('Error') } }
   </script>
 </body>
 </html>
