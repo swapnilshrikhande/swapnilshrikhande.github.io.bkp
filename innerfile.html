@@ -1,0 +1,19 @@
+<html>
+<body>
+</body>
+<script>
+var currentUrl = document.referrer;
+document.write('currentUrl : '+ getJsonFromUrl(currentUrl).conid );
+
+function getJsonFromUrl(query) {
+    var regex = /[?&]([^=#]+)=([^&#]*)/g,
+        url = query,
+        params = {},
+        match;
+    while(match = regex.exec(url)) {
+        params[match[1]] = match[2];
+    }
+    return params;
+}
+</script>
+</html>

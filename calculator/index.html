@@ -11,40 +11,41 @@
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
-  <form class="calc" style="zoom: 120%;" >
+  <form class="calc" >
     <p class="calc-display">
       <input type="text" name="res" id="res" value="0" class="calc-display-input" onfocus="this.blur()">
     </p>
     <p class="calc-row">
-      <button id="mrcButton" type="button" class="calc-button calc-button-gray" onclick="s('Just....')">mrc</button>
-      <button id="mMinusButton" type="button" class="calc-button calc-button-gray" onclick="s('....do..')">m-</button>
-      <button id="mPlusButton" type="button" class="calc-button calc-button-gray" onclick="s('......it')">m+</button>
-      <button id="divideButton" type="button" class="calc-button calc-button-red calc-button-big" onclick="a('/')">÷</button>
+      <button id="mrcButton" type="button" class="calc-button calc-button-gray" onclick="s(event,'Just....')">mrc</button>
+      <button id="mMinusButton" type="button" class="calc-button calc-button-gray" onclick="s(event,'....do..')">m-</button>
+      <button id="mPlusButton" type="button" class="calc-button calc-button-gray" onclick="s(event,'......it')">m+</button>
+      <button id="divideButton" type="button" class="calc-button calc-button-red calc-button-big" onclick="a(event,'/')">÷</button>
     </p>
     <p class="calc-row">
-      <button id="sevenButton" type="button" class="calc-button" onclick="a('7')">7</button>
-      <button id="eightButton" type="button" class="calc-button" onclick="a('8')">8</button>
-      <button id="nineButton" type="button" class="calc-button" onclick="a('9')">9</button>
-      <button id="multiplyButton" type="button" class="calc-button calc-button-red calc-button-big" onclick="a('*')">x</button>
+      <button id="sevenButton" type="button" class="calc-button" onclick="a(event,'7')">7</button>
+      <button id="eightButton" type="button" class="calc-button" onclick="a(event,'8')">8</button>
+      <button id="nineButton" type="button" class="calc-button" onclick="a(event,'9')">9</button>
+      <button id="multiplyButton" type="button" class="calc-button calc-button-red calc-button-big" onclick="a(event,'*')">x</button>
     </p>
     <p class="calc-row">
-      <button id="fourButton" type="button" class="calc-button" onclick="a('4')">4</button>
-      <button id="fiveButton" type="button" class="calc-button" onclick="a('5')">5</button>
-      <button id="sixButton" type="button" class="calc-button" onclick="a('6')">6</button>
-      <button id="minusButton" type="button" class="calc-button calc-button-red calc-button-big" onclick="a('-')">-</button>
+      <button id="fourButton" type="button" class="calc-button" onclick="a(event,'4')">4</button>
+      <button id="fiveButton" type="button" class="calc-button" onclick="a(event,'5')">5</button>
+      <button id="sixButton" type="button" class="calc-button" onclick="a(event,'6')">6</button>
+      <button id="minusButton" type="button" class="calc-button calc-button-red calc-button-big" onclick="a(event,'-')">-</button>
     </p>
     <p class="calc-row">
-      <button id="oneButton" type="button" class="calc-button" onclick="a('1')">1</button>
-      <button id="twoButton" type="button" class="calc-button" onclick="a('2')">2</button>
-      <button id="threeButton" type="button" class="calc-button" onclick="a('3')">3</button>
-      <button id="plusButton" type="button" class="calc-button calc-button-red calc-button-big" onclick="a('+')">+</button>
+      <button id="oneButton" type="button" class="calc-button" onclick="a(event,'1')">1</button>
+      <button id="twoButton" type="button" class="calc-button" onclick="a(event,'2')">2</button>
+      <button id="threeButton" type="button" class="calc-button" onclick="a(event,'3')">3</button>
+      <button id="plusButton" type="button" class="calc-button calc-button-red calc-button-big" onclick="a(event,'+')">+</button>
     </p>
     <p class="calc-row">
-      <button id="zeroButton" type="button" class="calc-button" onclick="a('0')">0</button>
-      <button id="dotButton" type="button" class="calc-button" onclick="a('.')">.</button>
-      <button id="cButton" type="button" class="calc-button" onclick="s('')">C</button>
-      <button id="eButton" type="button" class="calc-button calc-button-yellow calc-button-big" onclick="e()">=</button>
+      <button id="zeroButton" type="button" class="calc-button" onclick="a(event,'0')">0</button>
+      <button id="dotButton" type="button" class="calc-button" onclick="a(event,'.')">.</button>
+      <button id="cButton" type="button" class="clear-button calc-button" onclick="s(event,'')">C</button>
+      <button id="eButton" type="button" class="calc-button calc-button-yellow calc-button-big" onclick="e(event)">=</button>
     </p>
+ 
   </form>
   <!--
 	  <section class="about">
@@ -61,9 +62,9 @@
 	-->
 
   <script>
-    function s(v) { document.getElementById('res').value = v }
-    function a(v) { document.getElementById('res').value += v }
-    function e() { try { s(eval(document.getElementById('res').value)) } catch(e) { s('Error') } }
+    function s(event,v) { event.stopPropagation ? event.stopPropagation() : event.cancelBubble = true; document.getElementById('res').value = v }
+    function a(event,v) { event.stopPropagation ? event.stopPropagation() : event.cancelBubble = true; document.getElementById('res').value += v }
+    function e(event) {  event.stopPropagation ? event.stopPropagation() : event.cancelBubble = true; try { s(event,eval(document.getElementById('res').value)) } catch(e) { s('Error') } }
   </script>
 </body>
 </html>
