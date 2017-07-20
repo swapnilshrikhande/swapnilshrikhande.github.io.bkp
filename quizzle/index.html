@@ -63,7 +63,21 @@
           var hint          = hintsTemplates["lesser-hint"] + greaterNumber;
           alert(hint);
       };
+	
+	  function validateAnswer(event){
 
+		   var inputAnswerElement = document.getElementById("inputAnswerId");
+		   var answerInt = parseInt(inputAnswerElement.value);
+
+		   if( key === answerInt ){
+			   alert(" You Win :) ");
+		   } else {
+			   alert(" Try Again :( ");;
+		   }
+
+		   return false;
+	 }; 	
+	
       window.onload = initializeGame;
 
   </script>
