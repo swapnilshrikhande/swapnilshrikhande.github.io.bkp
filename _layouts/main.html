@@ -14,6 +14,9 @@ layout: default
   </header> <!-- End Header -->
   <nav class="sidebar-menu">
     <ul>
+	<li>
+	    <a href="{{ site.url }}">Home</a>
+	</li>
       {% for page in site.pages %}
 	{% if page.visibleInMenu == true %}
 		<li>
