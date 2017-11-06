@@ -1,7 +1,10 @@
 ---
 layout: main
+title: Personal
+permalink: /personal/
+visibleInMenu: true
 ---
-{% for post in paginator.posts %}
+{% for post in site.categories.Personal %}
 
     	<article class="post">
 		  {% if post.img %}
@@ -15,8 +18,5 @@ layout: main
 		    <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span>
 		  </div>
 	</article>
-     	
-
 {% endfor %}
 
-{% include pagination.html %}
