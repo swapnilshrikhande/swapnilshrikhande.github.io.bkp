@@ -1335,6 +1335,17 @@ a.newer-posts:hover {
   color: #263959;
 }
 
+.align-center{
+   margin-left: 50%;
+}
+
+.link {
+  font-family: 'PT Serif', serif;
+  text-decoration: none;
+  color: #263959;
+}
+
+
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
