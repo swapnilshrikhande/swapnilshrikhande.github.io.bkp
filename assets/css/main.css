@@ -1079,7 +1079,7 @@ table tfoot td {
 }
 
 footer .copyright {
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   margin: 0;
 }
@@ -1329,7 +1329,7 @@ a.newer-posts:hover {
   opacity: .8;
 }
 
-.sidebar-menu a {
+.sidebar-menu a ,.copyright a {
   font-family: 'PT Serif', serif;
   text-decoration: none;
   color: #263959;
