@@ -1,0 +1,30 @@
+---
+layout: main
+title: Gallery
+permalink: /gallery/
+---
+
+Gallery Page
+
+
+<div id="instafeed"></div>
+
+
+<script type="text/javascript">
+
+	var ss_site = ss_site || {};
+
+	ss_site.initializeInstaFeed = function(){
+	    var feed = new Instafeed({
+		get: 'user',
+		userId: 'shrikhande.swapnil',
+		clientId: '7e741e0da52e463e9a3c5eba36fe9ca1'
+	    });
+	    feed.run();
+	};
+
+	document.addEventListener("DOMContentLoaded", function() {
+	    ss_site.initializeInstaFeed();
+	});    
+</script>
+      
