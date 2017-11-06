@@ -921,7 +921,7 @@ table tfoot td {
 }
 
 .about {
-  margin: 0 0 40px;
+  margin: 0 0 20px;
   text-align: center;
 }
 
@@ -1327,6 +1327,12 @@ a.newer-posts:hover {
 .tag-list span a:hover {
   text-decoration: underline;
   opacity: .8;
+}
+
+.sidebar-menu a {
+  font-family: 'PT Serif', serif;
+  text-decoration: none;
+  color: #263959;
 }
 
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */

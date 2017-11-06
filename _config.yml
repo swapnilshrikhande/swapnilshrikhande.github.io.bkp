@@ -10,15 +10,15 @@ url: "http://swapnilshrikhande.in" # the base hostname & protocol for your site,
 # Author Settings
 author: Swapnil Shrikhande # add your name
 author-img: swapnil-shrikhande.jpg # add your photo
-about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
-twitter: # add your Twitter handle
-facebook: # add your Facebook handle
+about-author: Engineer with a zeal for innovation and quality. # add description
+twitter: svshrikhande # add your Twitter handle
+facebook: shrikhande.swapnil # add your Facebook handle
 github: swapnilshrikhande # add your Github handle
-linkedin: # add your Linkedin handle
+linkedin: swapnilshrikhande # add your Linkedin handle
 email: swapnilshrikhande.in@gmail.com # add your Email address
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+discus-identifier: swapnilshrikhande # add your discus identifier
 
 # Tracker
 analytics: # Google Analytics
