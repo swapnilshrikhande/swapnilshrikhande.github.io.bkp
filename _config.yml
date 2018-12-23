@@ -10,7 +10,7 @@ url: "http://swapnilshrikhande.in" # the base hostname & protocol for your site,
 # Author Settings
 author: Swapnil Shrikhande # add your name
 author-img: swapnil-shrikhande.jpg # add your photo
-about-author: designeener who likes to solve problems and then write the code # add description
+about-author: being useful # add description
 twitter: svshrikhande # add your Twitter handle
 facebook: shrikhande.swapnil # add your Facebook handle
 github: swapnilshrikhande # add your Github handle
@@ -36,3 +36,8 @@ paginate_path: "/page/:num"
 
 include: [".well-known"]
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+
+keep_files: [".well-known"]
+
+
+
